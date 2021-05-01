@@ -24,7 +24,7 @@ colors:
 body {
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
     color: #005280;
     text-align: center;
     min-width: 300px;
@@ -49,19 +49,20 @@ ul li {
     font-size: 140%;
 }
 .smaller-text {
-    font-size: 10px;
+    font-size: 12px;
 }
 .wrapper {
     max-width: 1200px;
     margin: 20px auto;
 }
-header, #experience, #prices {
+header, #experience, #cennik {
     background-size: cover;
     background-position: center center;
 }
 .triple-grid, .triple-grid-big {
     max-width: 1000px;
     margin: auto;
+    gap: 30px;
 }
 
 /*-------------*/
@@ -130,6 +131,10 @@ h1, h2, h3, nav, strong.upper-strong {
     text-transform: uppercase;
 }
 
+strong {
+    font-weight: 600;
+}
+
 /*-------------------*/
 /* Header */
 /*-------------------*/
@@ -170,20 +175,21 @@ nav > ul > a > li {
 }
 
 #header-logo-div {
-    margin: auto;
-}
-
-#header-logo-div {
     width: 90%;
     max-width: 1600px;
     height: 70vh;
     padding: 20vh 0;
+    margin: auto;
 }
 /*main name*/
 #header-logo-div h1 {
     font-size: 200%;
 }
 /*logo*/
+#logo {
+    margin-bottom: 30px;
+}
+
 #logo img {
     width: 70%;
     max-width: 300px;
@@ -196,46 +202,62 @@ nav > ul > a > li {
 #read-more-button {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     color: hsla(0, 0%, 100%, 30%);
+    width: 100%;
+    left: 0;
+    text-align: center;
 }
 #read-more-button a {
     transition: color 0.5s;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 20px;
 }
 #read-more-button a:hover {
     color: hsla(0, 0%, 100%, 100%);
 }
 
 /*-------*/
-/* About */
+/* o-mnie */
 /*-------*/
-#about {
+#o-mnie {
     line-height: 200%;
 }
-/*div for profile photo*/
-#profile-photo-div {
-    width: 65vw;
-    height: 65vw;
-    background: hsla(0, 0%, 0%, 5%);
-    transform: rotate(45deg);
-    overflow: hidden;
-    border-radius: 40px;
-    box-shadow: 0 0 20px hsla(0, 0%, 0%, 20%);
-    margin: 50px auto;
+
+#o-mnie .wrapper {
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 30px;
 }
-/*profile photo*/
-#profile-photo-div img {
-    width: 90%;
-    transform: rotate(-45deg) translateX(20%) scale(0.9);
+
+#o-mnie h2 {
+    margin: 15px auto;
 }
+
+#profile-photo-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#profile-photo {
+    width: 60%;
+    max-width: 300px;
+}
+
 /*profile text*/
 #profile-text-div {
     max-width: 400px;
-    margin: auto;
+    margin: 30px auto;
+    padding: 0 10px;
 }
-#about .wrapper {
-    padding: 10px 0 30px 0;
+
+#profile-text-div p {
+    font-size: 20px;
+}
+
+#o-mnie .wrapper {
+    padding: 0;
 }
 /*------------*/
 /* Experience */
@@ -243,52 +265,66 @@ nav > ul > a > li {
 #experience {
     background-image: url("../../img/experience.jpg");
 }
+
+#experience .blue-opacity .triple-grid {
+    gap: 30px;
+    border: 1px solid transparent;
+}
+
 /*big numbers - years*/
 .big-number {
     font-size: 100px;
     font-weight: 900;
-    font-family: 'Changa One', cursive;
-    margin: -15px 0 -10px 0;
+    font-family: 'Changa One', cursive; 
 }
 /*tile with exp info*/
 .experience-tile-div {
     text-align: center;
-    padding: 20px 0;
     max-width: 300px;
-    margin: 10px auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     align-self: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 30px auto;
 }
 
 /*---------*/
-/* Methods */
+/* leczenie */
 /*---------*/
-/*methods photo*/
-#methods img {
+/*leczenie photo*/
+#leczenie .wrapper .bigger-text {
+    margin-bottom: 20px;
+}
+#leczenie img {
     width: 80%;
     max-width: 400px;
     border-radius: 50px;
-    box-shadow: 0 0 10px #AAA;
+    box-shadow: 0 0 10px #CCC;
     margin: 20px 0;
 }
-/*methods list*/
+/*leczenie list*/
 #methods-list-title {
     margin: 0 0 10px 0;
-    font-weight: 700
+    font-weight: 600;
+    font-size: 20px;
 }
-#methods ul li {
+#leczenie ul li {
     line-height: 1.5;
+    font-size: 20px;
 }
 
 /*--------*/
 /* Prices */
 /*--------*/
-#prices {
+#cennik {
     background-image: url("../../img/prices.jpg");
 }
-#prices .wrapper {
+#cennik .wrapper {
     padding: 20px 0;
 }
-#prices h2 {
+#cennik h2 {
     margin: 0 0 20px 0;
 }
 /*big tile with info*/
@@ -298,7 +334,7 @@ nav > ul > a > li {
     margin: auto;
     color: #005280;
     border-radius: 30px;
-    padding: 10px 0 30px 0;
+    padding: 10px 5px 30px 5px;
 }
 .main-price-tile p {
     margin-top: 10px;
@@ -307,8 +343,9 @@ nav > ul > a > li {
 /*small tile with price*/
 .add-price-tile {
     position: relative;
-    top: -20px;
+    top: -25px;
     background: #005280;
+    border: 2px solid white;
     padding: 10px;
     width: 120px;
     left: 50%;
@@ -318,33 +355,40 @@ nav > ul > a > li {
     font-size: 120%;
 }
 /*multi-values for price tile*/
-.main-price-tile, .add-price-tile {
+.main-price-tile {
     box-shadow: 0 0 5px #333;
 }
 /*reservation-text*/
-#prices .reservation-text {
+#cennik .reservation-text {
     margin-top: 10px;
 }
 /*---------*/
 /* Contact */
 /*---------*/
-#contact .wrapper {
+#kontakt .wrapper {
     padding: 20px 0;
 }
 
 #contact-info {
-    line-height: 3.0;
+    line-height: 2;
+    margin: 40px auto;
 }
 /*map*/
 #google-map {
     width: 90%;
-    border-radius: 20px;
     border: none;
-    box-shadow: 0 0 10px #AAA;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #CCC;
     margin: 10px auto;
     height: 30vh;
     min-height: 150px;
     max-height: 350px;
+    max-width: 750px;
+}
+
+.rodo-link {
+    display: block;
+    margin-bottom: 30px;
 }
 
 /*--------*/
@@ -352,33 +396,38 @@ nav > ul > a > li {
 /*--------*/
 #footer {
     padding: 5px 0 10px 0;
-    font-size: 14px;
+    font-size: 16px;
 }
+
 #footer-nav a {
     display: inline-block;
     padding: 0 2%;
-    margin: 5px 0;
-    border-right: 1px solid hsla(0, 0%, 100%, 30%);
-    color: hsla(0, 0%, 100%, 30%);
+    border-right: 1px solid hsla(0, 0%, 100%, 60%);
+    color: hsla(0, 0%, 100%, 60%);
     transition: color 0.5s;
 }
+
 #footer-nav a:nth-last-child(1) {
     border-right: 0;
 }
+
 #footer-nav a:hover {
     color: hsla(0, 0%, 100%, 100%);
 }
+
+#footer p:nth-of-type(1) {
+    margin: 10px auto;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
 #footer p {
     line-height: 1.5;
 }
+
 #footer p.smaller-text {
     opacity: 0.4;
 }
-
-
-
-
-
 
 
 /*---------------*/
@@ -396,8 +445,8 @@ nav > ul > a > li {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    nav {
-        font-size: 1.3em;
+    nav ul li {
+        font-size: 20px;
     }
     #header-logo-div {
         padding: 15vh 0;
@@ -416,18 +465,19 @@ nav > ul > a > li {
         height: 30vw;
         width: 30vw;
     }
-    #contact .double-grid {
+    #kontakt .double-grid {
         margin-top: 30px;
     }
     #google-map {
-        width: 70%;
-        max-width: 350px;
         margin: 0;
-        justify-self: right;
     }
     #contact-info {
-        justify-self: left;
-        margin-left: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+        margin: 30px auto;
     }
     #google-map, #methods-text-div {
         grid-area: left;
@@ -438,7 +488,7 @@ nav > ul > a > li {
 }
 
 @media screen and (orientation: landscape) and (max-width: 600px) {
-    #about .wrapper .double-grid {
+    #o-mnie .wrapper .double-grid {
         display: block;
     }
     #profile-photo-div {
@@ -455,6 +505,9 @@ nav > ul > a > li {
 }
 
 @media screen and (min-width: 750px) {
+    #logo {
+        margin-bottom: 0;
+    }
     .double-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -466,10 +519,7 @@ nav > ul > a > li {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    #about p {
-        margin: 30px 0;
-    }
-    #contact .double-grid {
+    #kontakt .double-grid {
         margin-top: 30px;
     }
     #google-map, #methods-text-div {
@@ -489,7 +539,6 @@ nav > ul > a > li {
         width: 100%;
         background: none;
         color: hsla(0, 0%, 100%, 30%);
-        font-size: 0.9em;
         top: 0;
         height: 30vh;
     }
